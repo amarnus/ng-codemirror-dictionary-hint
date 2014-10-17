@@ -23,7 +23,7 @@ Load the script files into your application. Note that you need to load the
 <script src="bower_components/codemirror/addon/hint/show-hint.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
-<script type="text/javascript" src="ng-codemirror-dictionary-hint.js"></script>
+<script type="text/javascript" src="bower-components/ng-codemirror-dictionary-hint/ng-codemirror-dictionary-hint.js"></script>
 ```
 
 Add this module as a dependency to your AngularJS app:
