@@ -17,7 +17,7 @@ Load the script files into your application. Note that you need to load the
 [CodeMirror hint addon](http://codemirror.net/doc/manual.html#addons) as well.
 
 ```html
-<link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
+<link type="text/css" rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css">
 <link type="text/css" rel="stylesheet" href="bower_components/codemirror/addon/hint/show-hint.css" />
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
