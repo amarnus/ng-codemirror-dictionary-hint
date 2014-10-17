@@ -9,6 +9,10 @@ This directive allows you to add hint support for your Codemirror instance based
 
 ## Usage
 
+You can install using `bower`:
+
+    bower install ng-codemirror-dictionary-hint
+
 Load the script files into your application. Note that you need to load the 
 [CodeMirror hint addon](http://codemirror.net/doc/manual.html#addons) as well.
 
