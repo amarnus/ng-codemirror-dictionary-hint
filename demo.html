@@ -10,8 +10,13 @@
       <meta name="description" content="Demonstrates how a Codemirror instance can be configured to 
       hint words from a static dictionary.">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link type="text/css" rel="stylesheet" href="bower_components/codemirror/lib/codemirror.css" />
+      <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
       <link type="text/css" rel="stylesheet" href="bower_components/codemirror/addon/hint/show-hint.css" />
+      <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
+      <script src="bower_components/codemirror/addon/hint/show-hint.js"></script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+      <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+      <script type="text/javascript" src="ng-codemirror-dictionary-hint.js"></script>
       <style>
           .editor {
               border: solid thin gray;
@@ -23,9 +28,6 @@
       </style>
     </head>
     <body ng-controller="MainController">
-      <!--[if lt IE 7]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
       <h1>AngularJS Codemirror Dictionary Hint</h1>
       <p>
         <code>{{ tags | json }}</code>
@@ -38,12 +40,6 @@
             ng-codemirror-dictionary-hint="tags"></ui-codemirror>
       </div>
 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/codemirror/lib/codemirror.js"></script>
-      <script src="bower_components/codemirror/addon/hint/show-hint.js"></script>
-      <script src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
-      <script src="ng-codemirror-dictionary-hint.js"></script>
       <script>
         var app = angular.module('app', ['ui.codemirror','ng.codemirror.dictionary.hint']);
         // Editor controller.

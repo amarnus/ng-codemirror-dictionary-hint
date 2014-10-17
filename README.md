@@ -29,11 +29,11 @@ Finally, add the directive to your HTML as an attribute.
 - You can bind a scope variable (whose value must be an array) and optionally change it over time.
 
 ```html
-<div ui-codemirror ui-codemirror-dictionary-hint="tags"></div>
+<div ui-codemirror ng-codemirror-dictionary-hint="tags"></div>
 ```
 
 - You can bind an static array inline as well.
 
 ```html
-<div ui-codemirror ui-codemirror-dictionary-hint="[ 'Soccer', 'Cricket', 'Baseball', 'Kho Kho' ]"></div>
+<div ui-codemirror ng-codemirror-dictionary-hint="[ 'Soccer', 'Cricket', 'Baseball', 'Kho Kho' ]"></div>
 ```
