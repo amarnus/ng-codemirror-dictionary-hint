@@ -19,9 +19,9 @@ Load the script files into your application. Note that you need to load the
 ```html
 <link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
 <link type="text/css" rel="stylesheet" href="bower_components/codemirror/addon/hint/show-hint.css" />
-<script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
-<script src="bower_components/codemirror/addon/hint/show-hint.js"></script>
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="bower_components/codemirror/addon/hint/show-hint.js"></script>
 <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
 <script type="text/javascript" src="bower-components/ng-codemirror-dictionary-hint/ng-codemirror-dictionary-hint.js"></script>
 ```
