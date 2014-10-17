@@ -16,12 +16,8 @@
   "license": "MIT",
   "homepage": "http://github.com/amarnus/ng-codemirror-dictionary-hint",
   "ignore": [
-    "**/.*",
-    "node_modules",
     "bower_components",
-    "test",
-    "tests",
-    "demo.html"
+    "images"
   ],
   "dependencies": {
     "angular": "1.2.26",

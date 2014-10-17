@@ -2,6 +2,8 @@
 
 This directive allows you to add hint support for your Codemirror instance based on a custom dictionary.
 
+![Screenshot](https://raw.githubusercontent.com/amarnus/ng-codemirror-dictionary-hint/master/images/screenshot.png)
+
 ## Requirements
 - [Angular UI Codemirror](https://github.com/angular-ui/ui-codemirror)
 
