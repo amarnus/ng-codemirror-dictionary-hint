@@ -8,16 +8,6 @@ This directive allows you to add hint support for your Codemirror instance based
 ## Usage
 
 Load the script files into your application. Note that you need to load the 
-[CodeMirror hint addon](# Angular Codemirror Dictionary Hint
-
-This directive allows you to add hint support for your Codemirror instance based on a custom dictionary.
-
-## Requirements
-- [Angular UI Codemirror](https://github.com/angular-ui/ui-codemirror)
-
-## Usage
-
-Load the script files into your application. Note that you need to load the 
 [CodeMirror hint addon](http://codemirror.net/doc/manual.html#addons) as well.
 
 ```html
