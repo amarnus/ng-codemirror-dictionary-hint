@@ -38,7 +38,7 @@ Finally, add the directive to your HTML as an attribute.
 <div ui-codemirror ng-codemirror-dictionary-hint="tags"></div>
 ```
 
-- You can bind an static array inline as well.
+- You can bind a static array inline as well.
 
 ```html
 <div ui-codemirror ng-codemirror-dictionary-hint="[ 'Soccer', 'Cricket', 'Baseball', 'Kho Kho' ]"></div>
