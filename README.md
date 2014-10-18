@@ -1,4 +1,4 @@
-# Angular Codemirror Dictionary Hint
+# Angular Codemirror Dictionary Hint &nbsp;[![Build Status](https://travis-ci.org/amarnus/ng-codemirror-dictionary-hint.svg?branch=master)](https://travis-ci.org/amarnus/ng-codemirror-dictionary-hint)
 
 This directive allows you to add hint support for your Codemirror instance based on a custom dictionary.
 
