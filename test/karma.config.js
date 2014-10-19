@@ -19,7 +19,7 @@ module.exports = function(config) {
       'bower_components/codemirror/lib/codemirror.js',
       'bower_components/codemirror/addon/hint/show-hint.js',
       'bower_components/angular-ui-codemirror/ui-codemirror.js',
-      './ng-codemirror-dictionary-hint.js',
+      'lib/ng-codemirror-dictionary-hint.js',
       'test/*.spec.js'
     ],
 
