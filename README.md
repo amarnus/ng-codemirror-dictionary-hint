@@ -7,7 +7,7 @@ This directive allows you to add hint support for your Codemirror instance based
 ## Requirements
 - [Angular UI Codemirror](https://github.com/angular-ui/ui-codemirror)
 
-## Usage
+## Installation (Regular)
 
 You can install using `bower`:
 
@@ -28,9 +28,30 @@ Load the script files into your application. Note that you need to load the
 
 Add this module as a dependency to your AngularJS app:
 
-    angular.module('MyApp', [ 'ng.codemirror.dictionary.hint' ]);
+```javascript
 
-Finally, add the directive to your HTML as an attribute.
+angular.module('MyApp', [ 'ng.codemirror.dictionary.hint' ]);
+
+```
+
+## Installation (CommonJS)
+
+You can install using `npm`:
+
+    npm install ng-codemirror-dictionary-hint
+
+Add this module as a dependency to your AngularJS app:
+
+```javascript
+
+var angular = require('angular-node');
+angular.module('MyApp', [ require('ng-codemirror-dictionary-hint') ]);
+
+```
+
+## Usage
+
+Add the directive to your partial as an attribute.
 
 - You can bind a scope variable (whose value must be an array) and optionally change it over time.
 

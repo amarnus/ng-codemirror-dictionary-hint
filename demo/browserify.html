@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" ng-app="app"> <!--<![endif]-->
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Angular Codemirror Dictionary Hint</title>
+      <meta name="description" content="Demonstrates how a Codemirror instance can be configured to 
+      hint words from a static dictionary.">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link type="text/css" rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+      <link type="text/css" rel="stylesheet" href="../node_modules/codemirror/addon/hint/show-hint.css" />
+      <script type="text/javascript" src="./browserify-bundle.js"></script>
+      <style>
+          .editor {
+              border: solid thin gray;
+          }
+          .meta {
+            font-size: 90%;
+            color: #333;
+          }
+      </style>
+    </head>
+    <body ng-controller="MainController">
+      <h1>AngularJS Codemirror Dictionary Hint</h1>
+      <p>
+        <code>{{ tags | json }}</code>
+        <div class="meta">Dictionary will be modified in 5 seconds.</div>
+      </p>
+      
+      <div class="editor">
+        <ui-codemirror ng-model="code" 
+            ui-codemirror-opts="{ 'lineNumbers': true, 'autofocus': true }"
+            ng-codemirror-dictionary-hint="tags"></ui-codemirror>
+      </div>
+    </body>
+</html>

@@ -1,13 +1,13 @@
 {
   "name": "ng-codemirror-dictionary-hint",
-  "main": "ng-codemirror-dictionary-hint.js",
+  "description": "Angular directive that adds hint support to a Codemirror instance based on a custom dictionary.",
+  "main": "lib/ng-codemirror-dictionary-hint.js",
   "version": "0.3.0",
   "authors": [
     "Amarnath Ravikumar <amarnus@gmail.com>"
   ],
-  "description": "Angular directive that adds hint support to a Codemirror instance based on a custom dictionary.",
   "moduleType": [
-    "globals"
+    "commonjs"
   ],
   "keywords": [
     "angular",
