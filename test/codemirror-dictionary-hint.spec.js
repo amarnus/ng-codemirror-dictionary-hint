@@ -91,6 +91,7 @@ describe('ngCodemirrorDictionaryHint', function() {
     });
 
     beforeEach(function() {
+      compile();
       scope.words = [
         'Chennai',
         'Chandigarh',
@@ -102,8 +103,6 @@ describe('ngCodemirrorDictionaryHint', function() {
 
     it('should toggle hint list when characters match/don\'t match', function(cb) {
       var done = false;
-      
-      expect(compile).not.toThrow();
       
       runs(function() {
         scope.$broadcast('CodeMirror', function(cm) {
@@ -131,7 +130,6 @@ describe('ngCodemirrorDictionaryHint', function() {
 
     it('should toggle hint list when characters match/don\'t match (case-insensitive)', function(cb) {
       var done = false;
-      expect(compile).not.toThrow();
       
       runs(function() {
         scope.$broadcast('CodeMirror', function(cm) {
@@ -159,8 +157,6 @@ describe('ngCodemirrorDictionaryHint', function() {
 
     it('should include dynamically added words in the hint list', function(cb) {
       var done = false;
-      
-      expect(compile).not.toThrow();
       
       runs(function() {
         scope.$broadcast('CodeMirror', function(cm) {
