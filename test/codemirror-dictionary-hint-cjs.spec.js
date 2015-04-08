@@ -8,13 +8,14 @@ describe('ngCodemirrorDictionaryHint', function() {
 
   var $rootScope, $compile, scope;
 
-  beforeEach(function() {
-    // Load our module and its dependencies.
-    module('ui.codemirror');
-    module('ng.codemirror.dictionary.hint');
+  // Load our module and its dependencies.
+  var dictHint = require('../lib/ng-codemirror-dictionary-hint');
+  require('../node_modules/angular-mocks/angular-mocks');
 
+  beforeEach(function() {
+    angular.mock.module('ng.codemirror.dictionary.hint');
     // Inject the compile service.
-    inject(function(_$rootScope_, _$compile_) {
+    angular.mock.inject(function(_$rootScope_, _$compile_) {
       $rootScope = _$rootScope_;
       $compile = _$compile_;
       scope = $rootScope.$new();
@@ -28,7 +29,7 @@ describe('ngCodemirrorDictionaryHint', function() {
   describe('environment', function() {
 
     function compile() {
-      $compile('<div ui-codemirror ng-codemirror-dictionary-hint>')(scope);
+      $compile('<textarea ui-codemirror ng-model="code" ng-codemirror-dictionary-hint></textarea>')(scope);
     }
 
     function compileWithoutUiCodemirror() {
@@ -71,6 +72,7 @@ describe('ngCodemirrorDictionaryHint', function() {
 
     afterEach(function() {
       element.remove();
+      // scope.$digest();
     });
 
     it('should throw an error if the dictionary is a scalar', function() {
@@ -79,7 +81,6 @@ describe('ngCodemirrorDictionaryHint', function() {
         scope.words = 'Chennai+Chandigarh+Chattisgarh+Chidambaram';
         scope.$digest();
       }).toThrow(new Error('ng-codemirror-dictionary-hint must be a list.'));
-
     });
 
     it('should throw an error if the dictionary is an object', function() {
@@ -91,6 +92,7 @@ describe('ngCodemirrorDictionaryHint', function() {
     });
 
     beforeEach(function() {
+      compile();
       scope.words = [
         'Chennai',
         'Chandigarh',
@@ -102,8 +104,6 @@ describe('ngCodemirrorDictionaryHint', function() {
 
     it('should toggle hint list when characters match/don\'t match', function(cb) {
       var done = false;
-      
-      expect(compile).not.toThrow();
       
       runs(function() {
         scope.$broadcast('CodeMirror', function(cm) {
@@ -131,7 +131,6 @@ describe('ngCodemirrorDictionaryHint', function() {
 
     it('should toggle hint list when characters match/don\'t match (case-insensitive)', function(cb) {
       var done = false;
-      expect(compile).not.toThrow();
       
       runs(function() {
         scope.$broadcast('CodeMirror', function(cm) {
@@ -160,11 +159,10 @@ describe('ngCodemirrorDictionaryHint', function() {
     it('should include dynamically added words in the hint list', function(cb) {
       var done = false;
       
-      expect(compile).not.toThrow();
-      
       runs(function() {
         scope.$broadcast('CodeMirror', function(cm) {
           scope.words.push('Chicago');
+          scope.$digest();
           cm.setValue('C');
           var $hintItems = document.querySelectorAll('ul.CodeMirror-hints li');
           expect($hintItems.length).toBe(5);

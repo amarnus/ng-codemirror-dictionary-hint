@@ -6,3 +6,4 @@ before_script:
   - bower install
 script:
   - karma start --browsers="PhantomJS" test/karma.config.js
+  - karma start --browsers="PhantomJS" test/karma-cjs.config.js

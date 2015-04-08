@@ -9,20 +9,17 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: ['jasmine'],
+    frameworks: [ 'browserify', 'jasmine' ],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/codemirror/lib/codemirror.js',
-      'bower_components/codemirror/addon/hint/show-hint.js',
-      'bower_components/angular-ui-codemirror/ui-codemirror.js',
-      'lib/ng-codemirror-dictionary-hint.js',
-      'test/codemirror-dictionary-hint.spec.js'
+      'test/codemirror-dictionary-hint-cjs.spec.js'
     ],
 
+    preprocessors: {
+      'test/codemirror-dictionary-hint-cjs.spec.js': [ 'browserify' ]
+    },
 
     // list of files to exclude
     exclude: [

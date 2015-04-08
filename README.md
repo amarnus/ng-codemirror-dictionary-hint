@@ -28,7 +28,7 @@ Load the script files into your application. Note that you need to load the
 
 Add this module as a dependency to your AngularJS app:
 
-    angular.module('MyApp', [ 'ui.codemirror', 'ng.codemirror.dictionary.hint' ]);
+    angular.module('MyApp', [ 'ng.codemirror.dictionary.hint' ]);
 
 Finally, add the directive to your HTML as an attribute.
 
