@@ -29,9 +29,7 @@ Load the script files into your application. Note that you need to load the
 Add this module as a dependency to your AngularJS app:
 
 ```javascript
-
 angular.module('MyApp', [ 'ng.codemirror.dictionary.hint' ]);
-
 ```
 
 ## Installation (CommonJS)
@@ -43,10 +41,8 @@ You can install using `npm`:
 Add this module as a dependency to your AngularJS app:
 
 ```javascript
-
-var angular = require('angular-node');
+var angular = require('angular');
 angular.module('MyApp', [ require('ng-codemirror-dictionary-hint') ]);
-
 ```
 
 ## Usage

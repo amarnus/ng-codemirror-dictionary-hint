@@ -1,0 +1,8 @@
+bower_components
+node_modules
+test
+images
+demo
+.travis.yml
+.gitignore
+.git
